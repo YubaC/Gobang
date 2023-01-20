@@ -39,9 +39,6 @@ jobs:
 
       - name: Auto push
         run: |
-          git add to.txt
-          git add headIcons/*
-          git add hashList.json
-          git add messageBoard.json
-          git commit -m "${{ steps.GoUpdate.outputs.content }}"
+          git add .
+          git commit -m "Drop chess pieces"
           git push
