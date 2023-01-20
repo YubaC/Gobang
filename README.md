@@ -34,11 +34,11 @@ Just click the center of the chessboard grid to drop a piece there - that's so s
 <!-- Last-few-moves-starts-here -->
 | Player Name | Step |
 | - | - |
+| YubaC | C5 |
 | JNSGMS-28-10-AOS | C4 |
 | YubaC | D3 |
 | YubaC | E3 |
 | YubaC | D4 |
-| YubaC | C5 |
 
 <!-- Last-few-moves-ends-here -->
 <details>
