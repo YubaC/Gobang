@@ -22,12 +22,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
-      - run: |
-          git config --global user.email "2383931696@qq.com"
-          git config --global user.name "YubaC"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git pull --rebase
-
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -39,6 +33,10 @@ jobs:
 
       - name: Auto push
         run: |
+          git config --global user.email "2383931696@qq.com"
+          git config --global user.name "YubaC"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git pull --rebase
           git add .
           git commit -m "Drop chess pieces"
           git push
