@@ -45,6 +45,7 @@ HISTORY_FRAME = """
 Start: {0}
 End: {1}
 Win: {4}
+
 Players & Moved Steps: 
 {2}
 History: 
