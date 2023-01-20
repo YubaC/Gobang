@@ -42,9 +42,10 @@ Just click the center of the chessboard grid to drop a piece there - that's so s
 
 ### Game0
 
-Start: 2023-01-20 21:16:49
+Start: 2023-01-20 13:16:49
 End: 2023-01-20 15:47:49
 Win: ![White](images/white.svg) wins
+
 Players & Moved Steps: 
 | Player Name | Step Count |
 | - | - |
