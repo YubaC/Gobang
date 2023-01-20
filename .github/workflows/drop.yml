@@ -9,7 +9,7 @@ on:
 
 jobs:
   check-HTML-Links:
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
     if: startsWith(github.event.issue.title, 'drop,')
     steps:
       - if: startsWith(github.event.issue.title, 'drop,') && contains(github.event.issue.labels.*.name, 'test')
