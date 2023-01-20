@@ -31,11 +31,14 @@ jobs:
         run: |
           python gobangProcess.py ${{ github.event.issue.title }} "${{ github.event.issue.user.login }}"
 
-      - name: Commit and push
+
+      # Create new commit with the changed files and push it to GitHub
+      - name: Commit and push changes
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
-          git diff
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git config --global user.email "github-action-bot@example.com"
-          git config --global user.name "GitHub Action Bot"
-          git commit -m "Updated game" -a
+          git commit -m "Updated game"
           git push
