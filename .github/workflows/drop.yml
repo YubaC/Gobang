@@ -1,5 +1,6 @@
 # 负责检查pull reqests里html文件的Link是否都有效
 name: Drop chess pieces
+
 # 触发 workflow 的事件
 on:
   issues:
@@ -8,20 +9,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-HTML-Links:
+  drop:
     runs-on: windows-2019
-    if: startsWith(github.event.issue.title, 'drop,')
     steps:
-      - if: startsWith(github.event.issue.title, 'drop,') && contains(github.event.issue.labels.*.name, 'test')
-        run: |
-          # the triggering issue contains test
-          echo "${{ github.event_name }}"
-          exit 1
-
-      # 检出代码
-      - name: Check out repository code
+      - name: Clone repository
         uses: actions/checkout@v3
-        
+
       - run: |
           git config --local user.email "2383931696@qq.com"
           git config --local user.name "YubaC"
@@ -37,9 +30,8 @@ jobs:
         run: |
           python gobangProcess.py ${{ github.event.issue.title }} "${{ github.event.issue.user.login }}"
 
-
-      - name: Commit and push changes
+      - name: Auto push
         run: |
           git add .
-          git commit -m "Updated game"
+          git commit -m "${{ steps.GoUpdate.outputs.content }}"
           git push
