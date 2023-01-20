@@ -33,5 +33,5 @@ jobs:
       - name: Auto push
         run: |
           git add .
-          git commit -m "${{ steps.GoUpdate.outputs.content }}"
+          git commit -m "Drop."
           git push
