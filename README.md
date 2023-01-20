@@ -46,6 +46,7 @@ Start: 2023-01-20 13:16:49
 End: 2023-01-20 15:47:49
 
 Win: ![White](images/white.svg) wins
+
 Players & Moved Steps: 
 | Player Name | Step Count |
 | - | - |
