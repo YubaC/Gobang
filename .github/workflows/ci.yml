@@ -1,12 +1,10 @@
- 24 lines (21 sloc) 618 Bytes
 name: ci
 
 on:
   push:
     branches:
       - main
-
-    workflow_dispatch:
+  workflow_dispatch:
 #  schedule:
 #    - cron: "0 0 * * *"
 
