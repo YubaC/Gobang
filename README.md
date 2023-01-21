@@ -35,7 +35,7 @@ This is a gobang game.
 
 Just click the center of the chessboard grid to drop a piece there - that's so simple!
 
-Tired of waiting? [Request a move from Miss.Begonia](https://github.com/YubaC/Gobang/issues/new?title=drop,Begonia&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+Miss.Begonia+will+drop+a+piece+for+you+in+a+few+minutes.), she will randomly drop a piece for you -- She'll be happy to do it, I'm sure!
+Tired of waiting? [Request a move from Miss.Begonia](https://github.com/YubaC/Gobang/issues/new?title=drop,Begonia&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+Miss.Begonia+will+drop+a+piece+for+you+in+a+few+minutes.), she will drop a piece for you -- She'll be happy to do it, I'm sure.
 
 **Last few drops, this game:**
 <!-- Last-few-moves-starts-here -->

@@ -212,7 +212,11 @@ if win != -1:
     # 内容为step_count这个列表
     step_count_table = "| Player Name | Step Count |\n| - | - |\n"
     for i in range(len(step_count)):
-        step_count_table += "| {} | {} |\n".format("[@"+step_count[i][0]+"](https://github.com/"+step_count[i][0]+")", step_count[i][1])
+        # 用于避嫌
+        if step_count[i][0] != "Begonia":
+            step_count_table += "| {} | {} |\n".format("[@"+step_count[i][0]+"](https://github.com/"+step_count[i][0]+")", step_count[i][1])
+        else:
+            step_count_table += "| {} | {} |\n".format(step_count[i][0], step_count[i][1])
     # 将这个表格添加到gameBoard中
     # gameBoard.insert(1, step_count)
 
