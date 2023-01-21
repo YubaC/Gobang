@@ -356,7 +356,11 @@ rankingList = sorted(rankingList.items(), key=lambda x: x[1], reverse=True)
 rankingList = rankingList[:20]
 rankingList_table = "| Player | Drops |\n| - | - |\n"
 for i in range(len(rankingList)):
-    rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
+    if rankingList[i][0] != "Begonia":
+        rankingList_table += "| {} | {} |\n".format("[@"+rankingList[i][0]+"](https://github.com/"+rankingList[i][0]+")", rankingList[i][1])
+    else:
+        rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
+    # rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
 rankingList = rankingList_table
 readme = readme.splitlines()
 for i in range(len(readme)):
