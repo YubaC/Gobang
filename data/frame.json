@@ -2,7 +2,7 @@
     "number":0,
     "history":[],
     "start":"",
-    "step":"black",
+    "step":"white",
     "//board":"0:empty, 1:white, 2:black",
     "board":[
         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],

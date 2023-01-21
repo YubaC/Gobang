@@ -2,7 +2,7 @@ Game is in progress. This is open to ANYONE to play the next move. That's the po
 
 **Next step:**
 <!-- Next-piece -->
-![White](images/white.svg)
+![White](images/black.svg)
 
 <!-- Number-of-games -->
 ### Game1
