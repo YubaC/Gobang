@@ -69,6 +69,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 # 读取棋盘数据
 board = data['board']
+rankingList = data['rankingList']
 
 # 插入新棋子
 board[new_piece[0]][new_piece[1]] = 1 if data["step"] == "white" else 2
@@ -269,7 +270,6 @@ if win != -1:
     frame['start'] = now
 
     number = data['number'] + 1
-    rankingList = data['rankingList']
     
     data = frame
     frame['number'] = number
@@ -342,10 +342,12 @@ readme = '\n'.join(readme[:start+1]) + '\n' + str(steps) + '\n' +'\n'.join(readm
 # rankingList 是游戏玩家下棋数的字典
 # 如果这个玩家不在字典内，就将他加入字典
 # 字典的格式为：{'xxx': 1, 'xxx': 1}
-if data['player'] not in rankingList:
-    rankingList[data['player']] = 1
+if playerName not in rankingList.keys():
+    rankingList[playerName] = 1
 else:
-    rankingList[data['player']] += 1
+    rankingList[playerName] += 1
+
+data['rankingList'] = rankingList
 
 # 提取rankingList内排名前二十的玩家
 # 并将他们转为表格
@@ -355,7 +357,6 @@ rankingList_table = "| Player | Drops |\n| - | - |\n"
 for i in range(len(rankingList)):
     rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
 rankingList = rankingList_table
-readme = readme.splitlines()
 readme = readme.splitlines()
 for i in range(len(readme)):
     if readme[i] == '<!-- Ranking-list-starts-here -->':

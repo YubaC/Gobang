@@ -39,6 +39,8 @@ Just click the center of the chessboard grid to drop a piece there - that's so s
 
 <!-- Last-few-moves-ends-here -->
 
+Top 20 Leaderboard: Most moves across all games:
+
 <!-- Ranking-list-starts-here -->
 <!-- Ranking-list-ends-here -->
 
