@@ -28,12 +28,12 @@ jobs:
           python-version: 3.8
 
       - name: Drop a piece...
-        if: contains(github.event.issue.title, ',Begonia')
+        if: "contains(github.event.issue.title, ',Begonia')"
         run: |
           python gobangAI.py
       
       - name: Drop a piece...
-        if: !contains(github.event.issue.title, ',Begonia')
+        if: "!contains(github.event.issue.title, ',Begonia')"
         run: |
           python gobangProcess.py ${{ github.event.issue.title }} "${{ github.event.issue.user.login }}"
 
