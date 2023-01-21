@@ -38,6 +38,10 @@ Just click the center of the chessboard grid to drop a piece there - that's so s
 | - | - |
 
 <!-- Last-few-moves-ends-here -->
+
+<!-- Ranking-list-starts-here -->
+<!-- Ranking-list-ends-here -->
+
 <details>
 <summary><b>Previous games</b></summary>
 <!-- The-history-board-starts-here -->

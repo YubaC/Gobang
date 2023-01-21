@@ -161,7 +161,7 @@ def drawBoard(board, useLink=False):
 #   结束的注释标记为：<!-- The-game-board-ends-here -->
 #   从开始的注释标记到结束的注释标记之间的内容，就是棋盘的内容
 
-# 3.3. 判断胜负，并用新的棋盘替换掉旧的棋盘
+# 判断胜负，并用新的棋盘替换掉旧的棋盘
 
 # 历史棋盘开始的注释标记为：<!-- The-history-board-starts-here -->
 # 历史棋盘结束的注释标记为：<!-- The-history-board-ends-here -->
@@ -269,9 +269,11 @@ if win != -1:
     frame['start'] = now
 
     number = data['number'] + 1
+    rankingList = data['rankingList']
     
     data = frame
     frame['number'] = number
+    frame['rankingList'] = rankingList
     board = data['board']
     step_history=[]
 
@@ -335,6 +337,35 @@ for i in range(len(steps)):
     steps_table += "| {} | {} |\n".format(steps[i][0], y+str(steps[i][1]+1))
 steps = steps_table
 readme = '\n'.join(readme[:start+1]) + '\n' + str(steps) + '\n' +'\n'.join(readme[end:])
+
+# 更新rangingList
+# rankingList 是游戏玩家下棋数的字典
+# 如果这个玩家不在字典内，就将他加入字典
+# 字典的格式为：{'xxx': 1, 'xxx': 1}
+if data['player'] not in rankingList:
+    rankingList[data['player']] = 1
+else:
+    rankingList[data['player']] += 1
+
+# 提取rankingList内排名前二十的玩家
+# 并将他们转为表格
+rankingList = sorted(rankingList.items(), key=lambda x: x[1], reverse=True)
+rankingList = rankingList[:20]
+rankingList_table = "| Player | Drops |\n| - | - |\n"
+for i in range(len(rankingList)):
+    rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
+rankingList = rankingList_table
+readme = readme.splitlines()
+readme = readme.splitlines()
+for i in range(len(readme)):
+    if readme[i] == '<!-- Ranking-list-starts-here -->':
+        start = i
+        break
+for i in range(start+1, len(readme)):
+    if readme[i] == '<!-- Ranking-list-ends-here -->':
+        end = i
+        break
+readme = '\n'.join(readme[:start+1]) + '\n' + rankingList + '\n' +'\n'.join(readme[end:])
 
 # 4. 保存README.md文件
 with open('README.md', 'w', encoding='utf-8') as f:
