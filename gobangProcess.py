@@ -134,13 +134,10 @@ for i in range(15):
 
 def drawBoard(board, useLink=False):
     gameBoard = [
-        "|   | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |",
+        "|   | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 |",
         "| - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |"]
     for i in range(15):
-        if i < 9:
-            line = "| %s |" % ("0"+str(i+1))
-        else:
-            line = "| %s |" % (i+1)
+        line = "| %s |" % (chr(i + 65))
         for j in range(15):
             if board[i][j] == 0:
                 if useLink:
@@ -232,8 +229,8 @@ if win != -1:
 | Player Name | Step |\n| - | - |\n"""
     for i in range(len(step_history)):
         # 将Y坐标转为字母
-        y = chr(step_history[i][2] + 65)
-        history_steps += "| {} | {} |\n".format(step_history[i][0], y+str(step_history[i][1]+1))
+        x = chr(step_history[i][1] + 65)
+        history_steps += "| {} | {} |\n".format(step_history[i][0], x+str(step_history[i][2]+1))
     history_steps += "</details>\n"
     
     if win == 1:
@@ -333,8 +330,8 @@ for i in range(len(step_history)):
 steps_table = "| Player Name | Step |\n| - | - |\n"
 for i in range(len(steps)):
     # 将Y坐标转为字母
-    y = chr(steps[i][2] + 65)
-    steps_table += "| {} | {} |\n".format(steps[i][0], y+str(steps[i][1]+1))
+    x = chr(steps[i][1] + 65)
+    steps_table += "| {} | {} |\n".format(steps[i][0], x+str(steps[i][2]+1))
 steps = steps_table
 readme = '\n'.join(readme[:start+1]) + '\n' + str(steps) + '\n' +'\n'.join(readme[end:])
 
