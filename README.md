@@ -6,6 +6,7 @@ Next step:
 
 <!-- Number-of-games -->
 ### Game1
+
 <!-- The-game-board-starts-here -->
 |   | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
@@ -31,6 +32,7 @@ This is a gobang game.
 ### What should I do to play it?
 Just click the center of the chessboard grid to drop a piece there - that's so simple!
 
+Last few drops, this game:
 <!-- Last-few-moves-starts-here -->
 | Player Name | Step |
 | - | - |

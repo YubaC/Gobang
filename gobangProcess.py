@@ -323,9 +323,11 @@ for i in range(start+1, len(readme)):
 # 绘制最后几步棋
 steps = []
 # 获取step_history中最后几步棋
-steps = step_history[-5:]
-steps.sort()
-
+for i in range(len(step_history)):
+    if i > 5:
+        break
+    steps.append(step_history[-i-1])
+# 将最后几步棋转为表格
 steps_table = "| Player Name | Step |\n| - | - |\n"
 for i in range(len(steps)):
     # 将Y坐标转为字母
