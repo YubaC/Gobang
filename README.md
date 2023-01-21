@@ -1,6 +1,6 @@
 Game is in progress. This is open to ANYONE to play the next move. That's the point. wave It's your turn! Just click the chessboard to play with us!
 
-Next step:
+**Next step:**
 <!-- Next-piece -->
 ![White](images/white.svg)
 
@@ -32,7 +32,7 @@ This is a gobang game.
 ### What should I do to play it?
 Just click the center of the chessboard grid to drop a piece there - that's so simple!
 
-Last few drops, this game:
+**Last few drops, this game:**
 <!-- Last-few-moves-starts-here -->
 | Player Name | Step |
 | - | - |
