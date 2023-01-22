@@ -290,13 +290,13 @@ if data['step'] == "black":
 else:
     data['step'] = "black"
 
-# number-of-games下面插入游戏次数
+# 下一步的棋子颜色
 for i in range(len(readme)):
     if readme[i] == '<!-- Next-piece -->':
         if data['step'] == "black":
-            readme[i+1] = "![Black](images/black.svg)"
+            readme[i+1] = "![If you can see this line of text, the picture here is not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/black.svg)"
         else:
-            readme[i+1] = "![White](images/white.svg)"
+            readme[i+1] = "![If you can see this line of text, the picture here is not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)"
         break
 
 # 3.3.1. 找到开始的注释标记的行号
