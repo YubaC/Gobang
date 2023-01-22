@@ -294,9 +294,9 @@ else:
 for i in range(len(readme)):
     if readme[i] == '<!-- Next-piece -->':
         if data['step'] == "black":
-            readme[i+1] = "![If you can see this line of text, the picture here is not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/black.svg)"
+            readme[i+1] = "![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/black.svg)"
         else:
-            readme[i+1] = "![If you can see this line of text, the picture here is not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)"
+            readme[i+1] = "![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)"
         break
 
 # 3.3.1. 找到开始的注释标记的行号

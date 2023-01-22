@@ -2,7 +2,7 @@ Game is in progress. This is open to ANYONE to play the next move. That's the po
 
 **Next step:**
 <!-- Next-piece -->
-![If you can see this line of text, the picture here is not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)
+![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)
 
 <!-- Number-of-games -->
 ### Game4
