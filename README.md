@@ -37,7 +37,7 @@ Just click the center of the chessboard grid to drop a piece there - that's so s
 
 Tired of waiting? [Request a move from Begonia](https://github.com/YubaC/Gobang/issues/new?title=drop,Begonia&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+Begonia+will+drop+a+piece+for+you+in+a+few+minutes.), she will drop a piece for you -- She'll be happy to do it, I'm sure.
 
-**Last few drops, this game:**
+**Last few drops, this game (<img src="./images/sort-numeric-up-alt.svg#gh-light-mode-only" alt="From oldest to latest" style="width: 1em;"><img src="./images/sort-numeric-up-alt-night.svg#gh-dark-mode-only" alt="From oldest to latest" style="width: 1em;">):**
 <!-- Last-few-moves-starts-here -->
 | Player Name | Step |
 | - | - |
@@ -80,7 +80,7 @@ Players & Moved Steps:
 History:
 
 <details>
-<summary><b>Step History</b></summary>
+<summary><b>Step History  (<img src="./images/sort-numeric-down.svg#gh-light-mode-only" alt="From oldest to latest" style="width: 1em;"><img src="./images/sort-numeric-down-night.svg#gh-dark-mode-only" alt="From oldest to latest" style="width: 1em;">)</b></summary>
 
 | Player Name | Step |
 | - | - |
@@ -147,7 +147,7 @@ Players & Moved Steps:
 History:
 
 <details>
-<summary><b>Step History</b></summary>
+<summary><b>Step History  (<img src="./images/sort-numeric-down.svg#gh-light-mode-only" alt="From oldest to latest" style="width: 1em;"><img src="./images/sort-numeric-down-night.svg#gh-dark-mode-only" alt="From oldest to latest" style="width: 1em;">)</b></summary>
 
 | Player Name | Step |
 | - | - |
@@ -211,7 +211,7 @@ Players & Moved Steps:
 History:
 
 <details>
-<summary><b>Step History</b></summary>
+<summary><b>Step History  (<img src="./images/sort-numeric-down.svg#gh-light-mode-only" alt="From oldest to latest" style="width: 1em;"><img src="./images/sort-numeric-down-night.svg#gh-dark-mode-only" alt="From oldest to latest" style="width: 1em;">)</b></summary>
 
 | Player Name | Step |
 | - | - |
@@ -280,7 +280,7 @@ Players & Moved Steps:
 History:
 
 <details>
-<summary><b>Step History</b></summary>
+<summary><b>Step History  (<img src="./images/sort-numeric-down.svg#gh-light-mode-only" alt="From oldest to latest" style="width: 1em;"><img src="./images/sort-numeric-down-night.svg#gh-dark-mode-only" alt="From oldest to latest" style="width: 1em;">)</b></summary>
 
 | Player Name | Step |
 | - | - |

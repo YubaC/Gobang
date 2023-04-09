@@ -233,7 +233,7 @@ if win != -1:
 
     history_steps = """
 <details>
-<summary><b>Step History</b></summary>
+<summary><b>Step History  (<img src="./images/sort-numeric-down.svg#gh-light-mode-only" alt="From oldest to latest" style="width: 1em;"><img src="./images/sort-numeric-down-night.svg#gh-dark-mode-only" alt="From oldest to latest" style="width: 1em;">)</b></summary>
 
 | Player Name | Step |\n| - | - |\n"""
     for i in range(len(step_history)):
