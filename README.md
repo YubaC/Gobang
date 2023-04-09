@@ -1,4 +1,4 @@
-Game is in progress. This is open to ANYONE to play the next move. That's the point. wave It's your turn! Just click the chessboard to play with us!
+Game is in progress. This is open to ANYONE to play the next move. That's the point. Wave it's your turn! Just click the chessboard to play with us!
 
 **Next step:**
 <!-- Next-piece -->
@@ -27,15 +27,15 @@ Game is in progress. This is open to ANYONE to play the next move. That's the po
 | O | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,0&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,1&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,2&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,3&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,4&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,5&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,6&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,7&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,8&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,9&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,10&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,11&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,12&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,13&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) | [![](images/empty.svg)](https://github.com/YubaC/Gobang/issues/new?title=drop,14,14&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds.) |
 <!-- The-game-board-ends-here -->
 
-### What game is this? 
+### What game is this?
 
-This is a gobang game. 
+This is a gobang game.
 
 ### What should I do to play it?
 
 Just click the center of the chessboard grid to drop a piece there - that's so simple!
 
-Tired of waiting? [Request a move from Miss.Begonia](https://github.com/YubaC/Gobang/issues/new?title=drop,Begonia&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+Miss.Begonia+will+drop+a+piece+for+you+in+a+few+minutes.), she will drop a piece for you -- She'll be happy to do it, I'm sure.
+Tired of waiting? [Request a move from Begonia](https://github.com/YubaC/Gobang/issues/new?title=drop,Begonia&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+Miss.Begonia+will+drop+a+piece+for+you+in+a+few+minutes.), she will drop a piece for you -- She'll be happy to do it, I'm sure.
 
 **Last few drops, this game:**
 <!-- Last-few-moves-starts-here -->
@@ -71,13 +71,13 @@ Start: 2023-01-21 12:26:11
 End: 2023-01-22 01:26:40
 Win: ![Black](images/black.svg) wins
 
-Players & Moved Steps: 
+Players & Moved Steps:
 | Player Name | Step Count |
 | - | - |
 | [@YubaC](https://github.com/YubaC) | 12 |
 | Begonia | 9 |
 
-History: 
+History:
 
 <details>
 <summary><b>Step History</b></summary>
@@ -138,13 +138,13 @@ Start: 2023-01-21 04:07:18
 End: 2023-01-21 12:26:11
 Win: ![White](images/white.svg) wins
 
-Players & Moved Steps: 
+Players & Moved Steps:
 | Player Name | Step Count |
 | - | - |
 | [@YubaC](https://github.com/YubaC) | 9 |
 | Begonia | 9 |
 
-History: 
+History:
 
 <details>
 <summary><b>Step History</b></summary>
@@ -202,13 +202,13 @@ Start: 2023-01-20 15:47:49
 End: 2023-01-21 04:07:18
 Win: ![White](images/white.svg) wins
 
-Players & Moved Steps: 
+Players & Moved Steps:
 | Player Name | Step Count |
 | - | - |
 | [@YubaC](https://github.com/YubaC) | 11 |
 | [@JNSGMS-28-10-AOS](https://github.com/JNSGMS-28-10-AOS) | 11 |
 
-History: 
+History:
 
 <details>
 <summary><b>Step History</b></summary>
@@ -271,13 +271,13 @@ End: 2023-01-20 15:47:49
 
 Win: ![White](images/white.svg) wins
 
-Players & Moved Steps: 
+Players & Moved Steps:
 | Player Name | Step Count |
 | - | - |
 | [@YubaC](https://github.com/YubaC) | 11 |
 | [@JNSGMS-28-10-AOS](https://github.com/JNSGMS-28-10-AOS) | 1 |
 
-History: 
+History:
 
 <details>
 <summary><b>Step History</b></summary>
