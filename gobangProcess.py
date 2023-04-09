@@ -37,7 +37,8 @@
 # }
 # Author: YubaC 2023-1-20
 
-import json,sys
+import json
+import sys
 # import os
 import time
 URL = "https://github.com/YubaC/Gobang/issues/new?title=drop,{0},{1}&body=Just+push+%27Submit+new+issue%27+without+editing+the+title.+The+README+will+be+updated+after+approximately+30+seconds."
@@ -132,6 +133,7 @@ for i in range(15):
 
 # 3.2. 绘制棋盘的左边框和棋子
 
+
 def drawBoard(board, useLink=False):
     gameBoard = [
         "|   | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 |",
@@ -141,7 +143,7 @@ def drawBoard(board, useLink=False):
         for j in range(15):
             if board[i][j] == 0:
                 if useLink:
-                    line += " [![](images/empty.svg)]("+URL.format(i,j)+") |"
+                    line += " [![](images/empty.svg)]("+URL.format(i, j)+") |"
                 else:
                     line += " ![](images/empty.svg) |"
             elif board[i][j] == 1:
@@ -161,6 +163,7 @@ def drawBoard(board, useLink=False):
 
 # 判断胜负，并用新的棋盘替换掉旧的棋盘
 
+
 # 历史棋盘开始的注释标记为：<!-- The-history-board-starts-here -->
 # 历史棋盘结束的注释标记为：<!-- The-history-board-ends-here -->
 # 从开始的注释标记到结束的注释标记之间的内容，就是历史棋盘的内容
@@ -169,7 +172,7 @@ step_history = data['history']
 if win != -1:
     # 给gameBoard添加开始时间、结束时间、玩家操作、获胜方
     # gameBoard.insert(0, HISTORY_FRAME.format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), player, win))
-    HistoryGameBoard=drawBoard(board)
+    HistoryGameBoard = drawBoard(board)
     # 统计玩家的操作步数表，并对此排序
     # 方法是：遍历step_history这个列表
     # step_history的格式为[[PlayerName, x, y], [PlayerName, x, y], ...]
@@ -214,9 +217,11 @@ if win != -1:
     for i in range(len(step_count)):
         # 用于避嫌
         if step_count[i][0] != "Begonia":
-            step_count_table += "| {} | {} |\n".format("[@"+step_count[i][0]+"](https://github.com/"+step_count[i][0]+")", step_count[i][1])
+            step_count_table += "| {} | {} |\n".format(
+                "[@"+step_count[i][0]+"](https://github.com/"+step_count[i][0]+")", step_count[i][1])
         else:
-            step_count_table += "| {} | {} |\n".format(step_count[i][0], step_count[i][1])
+            step_count_table += "| {} | {} |\n".format(
+                step_count[i][0], step_count[i][1])
     # 将这个表格添加到gameBoard中
     # gameBoard.insert(1, step_count)
 
@@ -225,7 +230,7 @@ if win != -1:
 <summary><b>Gobang board</b></summary>
 """)
     HistoryGameBoard.append("</details>")
-    
+
     history_steps = """
 <details>
 <summary><b>Step History</b></summary>
@@ -234,19 +239,21 @@ if win != -1:
     for i in range(len(step_history)):
         # 将Y坐标转为字母
         x = chr(step_history[i][1] + 65)
-        history_steps += "| {} | {} |\n".format(step_history[i][0], x+str(step_history[i][2]+1))
+        history_steps += "| {} | {} |\n".format(
+            step_history[i][0], x+str(step_history[i][2]+1))
     history_steps += "</details>\n"
-    
+
     if win == 1:
         win = "![White](images/white.svg) wins"
     elif win == 2:
         win = "![Black](images/black.svg) wins"
 
-    HistoryGameBoard.insert(0, HISTORY_FRAME.format(data['start'], time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), step_count_table, history_steps, win))
+    HistoryGameBoard.insert(0, HISTORY_FRAME.format(data['start'], time.strftime(
+        "%Y-%m-%d %H:%M:%S", time.localtime()), step_count_table, history_steps, win))
     # HistoryGameBoard.insert(1, "| - | - | - | - |")
     HistoryGameBoard.insert(0, "\n### Game" + str(data["number"]))
-    
-    #找到开始的注释标记的行号
+
+    # 找到开始的注释标记的行号
     for i in range(len(readme)):
         if readme[i] == '<!-- The-history-board-starts-here -->':
             start = i
@@ -258,7 +265,8 @@ if win != -1:
             break
     # 用新的棋盘替换掉旧的棋盘
     # 删除旧棋盘所在行，在开始的注释标记后面插入新的棋盘
-    readme = '\n'.join(readme[:start+1]) + '\n' + '\n'.join(HistoryGameBoard) + '\n\n' +'\n'.join(readme[start+1:])
+    readme = '\n'.join(readme[:start+1]) + '\n' + '\n'.join(
+        HistoryGameBoard) + '\n\n' + '\n'.join(readme[start+1:])
     readme = readme.splitlines()
 
     # 读取frame.json
@@ -271,12 +279,12 @@ if win != -1:
     frame['start'] = now
 
     number = data['number'] + 1
-    
+
     data = frame
     frame['number'] = number
     frame['rankingList'] = rankingList
     board = data['board']
-    step_history=[]
+    step_history = []
 
     # number-of-games下面插入游戏次数
     for i in range(len(readme)):
@@ -294,9 +302,11 @@ else:
 for i in range(len(readme)):
     if readme[i] == '<!-- Next-piece -->':
         if data['step'] == "black":
-            readme[i+1] = "![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/black.svg)"
+            readme[i +
+                   1] = "![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/black.svg)"
         else:
-            readme[i+1] = "![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)"
+            readme[i +
+                   1] = "![If you can see this line of text, the pictures in the game are not loaded properly. This will prevent you from participating in this game. Try refreshing the page several times to resolve this problem.](images/white.svg)"
         break
 
 # 3.3.1. 找到开始的注释标记的行号
@@ -311,7 +321,8 @@ for i in range(start+1, len(readme)):
         break
 # 删除旧棋盘所在行，在开始的注释标记后面插入新的棋盘
 gameBoard = drawBoard(board, useLink=True)
-readme = '\n'.join(readme[:start+1]) + '\n' + '\n'.join(gameBoard) + '\n' +'\n'.join(readme[end:])
+readme = '\n'.join(readme[:start+1]) + '\n' + \
+    '\n'.join(gameBoard) + '\n' + '\n'.join(readme[end:])
 
 # 更新Last-few-moves-starts-here
 readme = readme.splitlines()
@@ -337,7 +348,8 @@ for i in range(len(steps)):
     x = chr(steps[i][1] + 65)
     steps_table += "| {} | {} |\n".format(steps[i][0], x+str(steps[i][2]+1))
 steps = steps_table
-readme = '\n'.join(readme[:start+1]) + '\n' + str(steps) + '\n' +'\n'.join(readme[end:])
+readme = '\n'.join(readme[:start+1]) + '\n' + \
+    str(steps) + '\n' + '\n'.join(readme[end:])
 
 # 更新rangingList
 # rankingList 是游戏玩家下棋数的字典
@@ -357,9 +369,11 @@ rankingList = rankingList[:20]
 rankingList_table = "| Player | Drops |\n| - | - |\n"
 for i in range(len(rankingList)):
     if rankingList[i][0] != "Begonia":
-        rankingList_table += "| {} | {} |\n".format("[@"+rankingList[i][0]+"](https://github.com/"+rankingList[i][0]+")", rankingList[i][1])
+        rankingList_table += "| {} | {} |\n".format(
+            "[@"+rankingList[i][0]+"](https://github.com/"+rankingList[i][0]+")", rankingList[i][1])
     else:
-        rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
+        rankingList_table += "| {} | {} |\n".format(
+            rankingList[i][0], rankingList[i][1])
     # rankingList_table += "| {} | {} |\n".format(rankingList[i][0], rankingList[i][1])
 rankingList = rankingList_table
 readme = readme.splitlines()
@@ -371,7 +385,8 @@ for i in range(start+1, len(readme)):
     if readme[i] == '<!-- Ranking-list-ends-here -->':
         end = i
         break
-readme = '\n'.join(readme[:start+1]) + '\n' + rankingList + '\n' +'\n'.join(readme[end:])
+readme = '\n'.join(readme[:start+1]) + '\n' + \
+    rankingList + '\n' + '\n'.join(readme[end:])
 
 # 4. 保存README.md文件
 with open('README.md', 'w', encoding='utf-8') as f:
@@ -382,4 +397,3 @@ with open('README.md', 'w', encoding='utf-8') as f:
 with open(r'data\game.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(data))
     f.close()
-
